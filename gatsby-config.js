@@ -4,9 +4,6 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const gaTrackingId = process.env.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID;
-
-
 module.exports = {
   siteMetadata: {
     title: process.env.GATSBY_APP_TITLE,
@@ -29,17 +26,6 @@ module.exports = {
         start_url: '/',
       }
     },
-    // {
-    //   resolve: 'gatsby-plugin-offline',
-    //   options: {
-    //     precachePages: ['/vehicles', '/sold-row'],
-    //     workboxConfig: {
-    //       globIgnores: ['sw-update-manager.js'],
-    //       globPatterns: ['**/*'],
-    //       skipWaiting: false,
-    //     },
-    //   },
-    // },
 
     //--------------------------------------------------------------------------
     {
