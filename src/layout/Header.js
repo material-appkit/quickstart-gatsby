@@ -14,7 +14,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 import ApplicationLogo from 'media/application-logo.svg';
-import NpmLogo from 'media/npm-logo.png';
 
 import TopNavbar from './TopNavbar';
 import NavMenu from './NavMenu';
