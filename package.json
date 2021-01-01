@@ -1,22 +1,19 @@
 {
   "name": "@material-appkit/quickstart-gatsby",
-  "private": true,
   "description": "Gatsby Quickstart",
   "version": "1.0.0",
   "author": "Allan Hart",
   "dependencies": {
+    "@fontsource/open-sans": "^4.1.0",
+    "@material-appkit/core": "^2.9.92",
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
-    "gatsby": "^2.29.2",
-    "gatsby-plugin-load-script": "^1.1.0",
+    "gatsby": "^2.29.3",
     "gatsby-plugin-manifest": "^2.9.1",
     "gatsby-plugin-material-ui": "^2.1.10",
-    "gatsby-plugin-offline": "^3.7.1",
     "gatsby-plugin-react-helmet-async": "^1.1.0",
-    "gatsby-plugin-sharp": "^2.11.2",
     "gatsby-source-filesystem": "^2.8.1",
-    "gatsby-transformer-sharp": "^2.9.0",
     "notistack": "^1.0.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
@@ -25,10 +22,6 @@
   },
   "devDependencies": {
     "dotenv-cli": "^4.0.0",
-    "gh-pages": "^3.1.0",
-    "lodash.debounce": "^4.0.8",
-    "lodash.isequal": "^4.5.0",
-    "path-to-regexp": "^6.2.0",
     "prettier": "^2.2.1"
   },
   "keywords": [
@@ -38,12 +31,8 @@
   "scripts": {
     "build": "GATSBY_APP_VERSION=$npm_package_version gatsby build",
     "develop": "gatsby develop -H 0.0.0.0 -p 8001",
-    "debug": "node --no-lazy node_modules/.bin/gatsby develop --inspect-brk develop -H 0.0.0.0 -p 8001",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "GATSBY_APP_VERSION=$npm_package_version npm run develop",
-    "start-debug": "GATSBY_APP_VERSION=$npm_package_version npm run debug",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d public",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
