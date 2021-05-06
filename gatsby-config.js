@@ -11,21 +11,10 @@ module.exports = {
   },
   plugins: [
     //--------------------------------------------------------------------------
-    // 'gatsby-plugin-preact',
+    'gatsby-plugin-no-ie',
+
     //--------------------------------------------------------------------------
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        background_color: '#fafafa',
-        cache_busting_mode: 'none',
-        display: 'standalone',
-        icon: 'data/images/application-logo.png',
-        name: process.env.GATSBY_APP_TITLE,
-        theme_color: '#fff',
-        short_name: 'MUI AppKit',
-        start_url: '/',
-      }
-    },
+    // 'gatsby-plugin-preact',
 
     //--------------------------------------------------------------------------
     {
@@ -48,13 +37,5 @@ module.exports = {
 
     //--------------------------------------------------------------------------
     'gatsby-plugin-react-helmet-async',
-
-    //--------------------------------------------------------------------------
-    {
-      resolve: 'gatsby-plugin-load-script',
-      options: {
-        src: '/noie.js',
-      },
-    },
   ],
 };

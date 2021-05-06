@@ -20,7 +20,7 @@ import Header from './Header';
 import AppContext from 'AppContext';
 
 import ApplicationNavTree from './ApplicationNavTree';
-import SEO from './seo';
+import Seo from './seo';
 
 const styles = makeStyles((theme) => ({
   rootContainer: {
@@ -143,7 +143,7 @@ const Layout = (props) => {
 
   return (
     <>
-      <SEO title={props.pageTitle || props.title} />
+      <Seo title={props.pageTitle || props.title} />
 
       {fabButton}
 
