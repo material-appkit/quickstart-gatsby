@@ -1,26 +1,11 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import AirbnbCerealBlack from './font/AirbnbCerealBook.woff';
 
-const BOTTOM_BAR_HEIGHT = 56;
 const APP_BAR_HEIGHT = 56;
 const NAVBAR_WIDTH = 220;
-const SIDEBAR_WIDTH = 260;
-const FOOTER_HEIGHT = 56;
 
 const baseTheme = createMuiTheme();
 
-const cerealFontFace = {
-  fontFamily: 'Cereal',
-  fontStyle: 'normal',
-  fontDisplay: 'swap',
-  src: `
-    local('AirbnbCerealBlack'),
-    url(${AirbnbCerealBlack}) format('woff')
-  `,
-};
-
 const theme = createMuiTheme({
-  //----------------------------------------------------------------------------
   palette: {
     background: {
       default: '#fff',
@@ -33,48 +18,59 @@ const theme = createMuiTheme({
     },
   },
 
-  mixins: {
-    pageTitle: {
-      fontSize: baseTheme.typography.pxToRem(28),
-      marginBottom: baseTheme.spacing(3),
-    },
-  },
-
   typography: {
     button: {
       textTransform: 'none',
     },
 
-    fontFamily: 'Cereal, Roboto, Helvetica, Arial, sans-serif',
+    fontFamily: 'Open Sans, Helvetica, Arial, sans-serif',
 
     h1: {
       fontSize: baseTheme.typography.pxToRem(40),
+      fontWeight: 400,
     },
 
     h2: {
       fontSize: baseTheme.typography.pxToRem(24),
+      fontWeight: 400,
     },
 
     h3: {
       fontSize: baseTheme.typography.pxToRem(20),
+      fontWeight: 400,
     },
 
     h4: {
       fontSize: baseTheme.typography.pxToRem(16),
-    }
+      fontWeight: 400,
+    },
   },
 
   overrides: {
     MuiCssBaseline: {
       '@global': {
-        '@font-face': [cerealFontFace],
-
         'html, body, #___gatsby, #gatsby-focus-wrapper': {
           [baseTheme.breakpoints.up('md')]: {
             height: '100vh',
           },
         },
       },
+    },
+
+    MuiTypography: {
+      button: {
+        fontSize: 'inherit',
+        fontWeight: 600,
+        lineHeight: 'inherit',
+      },
+    },
+
+    MuiLink: {
+      button: {
+        fontFamily: 'inherit',
+        fontSize: baseTheme.typography.button.fontSize,
+        verticalAlign: 'unset',
+      }
     },
   },
 
@@ -84,20 +80,8 @@ const theme = createMuiTheme({
     height: APP_BAR_HEIGHT,
   },
 
-  bottomBar: {
-    height: BOTTOM_BAR_HEIGHT,
-  },
-
   navbar: {
     width: NAVBAR_WIDTH,
-  },
-
-  sidebar: {
-    width: SIDEBAR_WIDTH,
-  },
-
-  footer: {
-    height: FOOTER_HEIGHT,
   },
 
 

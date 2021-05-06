@@ -1,12 +1,8 @@
 import PropTypes from 'prop-types';
-
 import React from 'react';
 
-import { SnackbarProvider } from 'notistack';
-
-import { handleException } from 'util/shortcuts';
-
 import Application from './Application';
+import { handleException } from 'util/shortcuts';
 
 
 class AppWrapper extends React.PureComponent {
@@ -31,11 +27,9 @@ class AppWrapper extends React.PureComponent {
 
   render() {
     return (
-      <SnackbarProvider maxSnack={3}>
-        <Application>
-          {this.props.rootElement}
-        </Application>
-      </SnackbarProvider>
+      <Application>
+        {this.props.rootElement}
+      </Application>
     );
   }
 }
